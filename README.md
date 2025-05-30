@@ -64,18 +64,21 @@ npx playwright test tests/cart.spec.ts
 📁 Project Structure
 
 cpanel-playwright/
-├── pages/                # Page Object Model (POM)
+├── pages/
 │   ├── HomePage.ts
 │   ├── ProductPage.ts
 │   └── CheckoutPage.ts
-├── tests/                # Test specs & config
+│
+├── tests/
 │   ├── cart.spec.ts
 │   └── playwright.config.ts
+│
 ├── .gitignore
-├── eslint.config.mjs     # ESLint rules
+├── eslint.config.mjs
 ├── package.json
 ├── package-lock.json
 └── README.md
+
 
 🧹 Linting
 Project uses ESLint for maintaining code quality and standards:
