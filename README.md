@@ -63,22 +63,13 @@ npx playwright test tests/cart.spec.ts
 
 📁 Project Structure
 
-cpanel-playwright/
-├── pages/
-│   ├── HomePage.ts
-│   ├── ProductPage.ts
-│   └── CheckoutPage.ts
-│
-├── tests/
-│   ├── cart.spec.ts
-│   └── playwright.config.ts
-│
-├── .gitignore
-├── eslint.config.mjs
-├── package.json
-├── package-lock.json
-└── README.md
+The cpanel-playwright project is organized as follows:
 
+The pages directory contains the Page Object Model (POM) classes: HomePage.ts, ProductPage.ts, and CheckoutPage.ts.
+
+The tests directory includes the test specifications and configuration: cart.spec.ts for testing the cart functionality, and playwright.config.ts for Playwright setup.
+
+The root directory contains configuration and metadata files: .gitignore, eslint.config.mjs, package.json, package-lock.json, and README.md.
 
 🧹 Linting
 Project uses ESLint for maintaining code quality and standards:
