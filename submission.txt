@@ -1,0 +1,46 @@
+# Issues and Problems Faced During Automation
+
+Author: Leonid Ksenchuk
+Project: cPanel Store Automation (Playwright + TypeScript)
+
+---
+
+## 🐛 Issues Found
+
+1. ❌ The "Continue" button occasionally fails to become clickable due to slow validation of the IP address.
+   - Workaround: Added explicit waits and retry logic.
+   - Consider using `await page.waitForLoadState()` or similar on real projects.
+
+2. ❌ Addon checkbox was styled with a non-native UI (`iCheck`), which made it hard to trigger via standard selectors.
+   - Workaround: Clicked the visible parent label or styled box.
+
+3. ❌ Duplicate test title error when writing multiple test cases under same description.
+   - Fixed by giving each test a unique title.
+
+4. ⚠️ ESlint initially failed due to config format (v9 uses `eslint.config.mjs`)
+   - Migrated from `.eslintrc.json` to `.mjs` format.
+   - Installed all necessary plugins manually.
+
+---
+
+## 🧪 Skipped Tests
+
+_No tests skipped. All core flow tests passed locally._
+
+---
+
+## ⏱ CI Note
+
+Tests pass locally, but CI performance may vary based on site responsiveness (as it’s a live store). Recommend running with `--headed` for visibility if debugging.
+
+---
+
+## 💡 Suggestions for Improvement
+
+- cPanel Store could benefit from test IDs on dynamic elements.
+- Use of styled checkboxes makes test automation harder and less reliable.
+- Prorated pricing introduces complexity in test validation — may need to mock/freeze date for full accuracy.
+
+---
+
+End of Report.
